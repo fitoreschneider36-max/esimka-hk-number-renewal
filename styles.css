@@ -1,0 +1,524 @@
+:root {
+  --ink: #111827;
+  --muted: #5d697a;
+  --line: #dce3ea;
+  --page: #f6f8fb;
+  --white: #ffffff;
+  --navy: #10213d;
+  --blue: #1769aa;
+  --mint: #0f8b72;
+  --mint-soft: #e8f6f1;
+  --amber: #c07a21;
+  --amber-soft: #fff2df;
+  --rose-soft: #fff0f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  background: var(--page);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.shell {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+  background: rgba(246, 248, 251, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav-cta {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 800;
+}
+
+.hero {
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(16, 33, 61, 0.98), rgba(16, 33, 61, 0.86) 52%, rgba(16, 33, 61, 0.45)),
+    url("./assets/device-esim.jpg") center / cover;
+  color: #fff;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.05fr) minmax(280px, 0.95fr);
+  gap: 48px;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #f4bd65;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+strong {
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(42px, 6.6vw, 78px);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(30px, 4.5vw, 54px);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 8px 0 10px;
+  font-size: 22px;
+  line-height: 1.24;
+}
+
+.lead {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(18px, 2.1vw, 23px);
+}
+
+.hero-actions,
+.cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-actions {
+  margin-top: 34px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: #f4bd65;
+  color: #211406;
+}
+
+.button.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  color: #fff;
+}
+
+.hero-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.status-card {
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.status-card span,
+.mini-grid span,
+.feature-grid .num,
+.price-cards span {
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.status-card strong {
+  display: block;
+  margin: 12px 0;
+  color: #f4bd65;
+  font-size: 58px;
+  line-height: 1;
+}
+
+.status-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mini-grid span {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+section {
+  padding: 84px 0;
+}
+
+.section-copy {
+  max-width: 760px;
+  margin-bottom: 34px;
+}
+
+.section-copy.wide {
+  max-width: 980px;
+}
+
+.section-copy p:not(.eyebrow),
+.feature-grid p,
+.use-list p,
+.price-cards p,
+.flow span,
+figcaption,
+.footer p {
+  color: var(--muted);
+}
+
+.proof {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+  gap: 38px;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.renewal-shot img {
+  display: block;
+  width: 100%;
+  background: #eef3f7;
+}
+
+figcaption {
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+.band {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.88fr) minmax(320px, 1.12fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.use-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.use-list article,
+.feature-grid article,
+.price-cards article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.use-list article {
+  min-height: 240px;
+  padding: 20px;
+}
+
+.use-list article:nth-child(1) {
+  background: var(--mint-soft);
+}
+
+.use-list article:nth-child(2) {
+  background: var(--amber-soft);
+}
+
+.use-list article:nth-child(3) {
+  background: var(--rose-soft);
+}
+
+.use-list span {
+  color: var(--mint);
+  font-weight: 900;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.feature-grid article {
+  min-height: 250px;
+  padding: 20px;
+}
+
+.feature-grid article:nth-child(4n + 1) {
+  background: var(--mint-soft);
+}
+
+.feature-grid article:nth-child(4n + 2) {
+  background: #edf3ff;
+}
+
+.feature-grid article:nth-child(4n + 3) {
+  background: var(--amber-soft);
+}
+
+.feature-grid article:nth-child(4n) {
+  background: #f7efff;
+}
+
+.num {
+  color: var(--blue);
+}
+
+.price-section {
+  background: #eef3f7;
+}
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.price-cards article {
+  padding: 22px;
+}
+
+.price-cards .highlight {
+  background: var(--navy);
+  color: #fff;
+}
+
+.price-cards .highlight p {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.price-cards strong {
+  display: block;
+  margin: 10px 0;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.05;
+}
+
+.price-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.price-images img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.flow ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: steps;
+}
+
+.flow li {
+  min-height: 220px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  counter-increment: steps;
+}
+
+.flow li::before {
+  content: counter(steps, decimal-leading-zero);
+  display: block;
+  margin-bottom: 24px;
+  color: var(--amber);
+  font-weight: 900;
+}
+
+.flow strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.cta {
+  background: var(--navy);
+  color: #fff;
+}
+
+.cta-inner {
+  justify-content: space-between;
+}
+
+.cta-inner div {
+  max-width: 790px;
+}
+
+.cta p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.footer {
+  padding: 28px 0 38px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 1060px) {
+  .hero-inner,
+  .proof,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 28px, 1160px);
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .hero {
+    min-height: 760px;
+    background:
+      linear-gradient(180deg, rgba(16, 33, 61, 0.98), rgba(16, 33, 61, 0.78)),
+      url("./assets/device-esim.jpg") center / cover;
+  }
+
+  .hero-inner {
+    padding: 58px 0;
+  }
+
+  .mini-grid,
+  .use-list,
+  .feature-grid,
+  .price-cards,
+  .price-images,
+  .flow ol {
+    grid-template-columns: 1fr;
+  }
+
+  .price-images img {
+    height: 240px;
+  }
+}
